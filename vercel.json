@@ -1,12 +1,11 @@
 ﻿{
-  "headers": [
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "https://kronava.com.br" },
-        { "key": "Access-Control-Allow-Methods", "value": "POST, OPTIONS" },
-        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
-      ]
-    }
+  "version": 2,
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "api/curadoria.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/curadoria", "dest": "/api/curadoria.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
