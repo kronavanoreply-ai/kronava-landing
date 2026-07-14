@@ -202,7 +202,7 @@
     .cta-final {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 6rem 2rem 2rem;
+      padding: 6rem 2rem 10rem;
       text-align: center;
     }
 
@@ -221,82 +221,6 @@
     }
 
     .cta-final a:hover { opacity: 0.75; }
-
-    .capture {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 4rem 2rem 10rem;
-    }
-
-    .capture-inner {
-      max-width: 480px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .capture p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 2.5rem;
-      line-height: 1.8;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      text-align: left;
-    }
-
-    @media (min-width: 640px) {
-      .form-group { flex-direction: row; align-items: flex-end; }
-    }
-
-    .input-email {
-      flex: 1;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid var(--border);
-      padding: 0.75rem 0;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 300;
-      color: var(--text);
-      outline: none;
-      min-height: 48px;
-      transition: border-color 0.2s;
-    }
-
-    .input-email::placeholder { color: var(--text-muted); }
-    .input-email:focus { border-bottom-color: var(--text); }
-
-    .btn-submit {
-      background: var(--btn-bg);
-      color: var(--btn-text);
-      border: none;
-      padding: 0 2rem;
-      min-height: 48px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: opacity 0.2s;
-      white-space: nowrap;
-    }
-
-    .btn-submit:hover { opacity: 0.75; }
-    .btn-submit:disabled { opacity: 0.4; cursor: not-allowed; }
-
-    .success-msg {
-      display: none;
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      padding: 1rem 0;
-    }
 
     footer {
       max-width: 1100px;
@@ -324,7 +248,7 @@
     <section class="hero">
       <h1>Sua mente livre.<br><em>A inteligência do Kronava</em><br>cuida das suas finanças<br>de forma invisível.</h1>
       <p>Chega de abrir um app para descobrir o que você já devia saber. O Kronava organiza, entende e age — enquanto você vive.</p>
-      <a href="#lista" class="btn-ghost">Começar agora</a>
+      <a href="/beta" class="btn-ghost">Começar agora</a>
     </section>
 
     <!-- STORYTELLING -->
@@ -364,30 +288,7 @@
 
     <!-- CTA FINAL -->
     <section class="cta-final">
-      <a href="#lista">Quero minha mente de volta</a>
-    </section>
-
-    <!-- CAPTURA -->
-    <section class="capture" id="lista">
-      <div class="capture-inner">
-        <p>O acesso ao MVP está sendo liberado em ondas restritas para convidados seletos.</p>
-        <div class="form-group" id="form-container">
-          <input
-            type="email"
-            class="input-email"
-            id="email-input"
-            placeholder="Seu e-mail corporativo"
-            autocomplete="email"
-            required
-          />
-          <button class="btn-submit" id="submit-btn" onclick="handleSubmit()">
-            Aplicar para a Lista
-          </button>
-        </div>
-        <p class="success-msg" id="success-msg">
-          Solicitação recebida. Verifique sua caixa de entrada.
-        </p>
-      </div>
+      <a href="/beta">Quero minha mente de volta</a>
     </section>
 
   </main>
@@ -395,52 +296,6 @@
   <footer>
     <p>© 2025 KRONAVA</p>
   </footer>
-
-  <script>
-    async function handleSubmit() {
-      const emailInput = document.getElementById('email-input');
-      const submitBtn = document.getElementById('submit-btn');
-      const formContainer = document.getElementById('form-container');
-      const successMsg = document.getElementById('success-msg');
-      const email = emailInput.value.trim();
-
-      if (!email || !email.includes('@')) {
-        emailInput.focus();
-        return;
-      }
-
-      submitBtn.disabled = true;
-      submitBtn.textContent = '...';
-
-      try {
-        const res = await fetch('/api/curadoria', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email })
-        });
-
-        if (res.ok || res.status === 409) {
-          formContainer.style.display = 'none';
-          successMsg.style.display = 'block';
-          if (window.gtag) {
-            window.gtag('event', 'curadoria_signup');
-          }
-        } else {
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Aplicar para a Lista';
-          alert('Erro ao enviar. Tente novamente.');
-        }
-      } catch (err) {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Aplicar para a Lista';
-        alert('Erro de conexão. Tente novamente.');
-      }
-    }
-
-    document.getElementById('email-input').addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') handleSubmit();
-    });
-  </script>
 
 </body>
 </html>

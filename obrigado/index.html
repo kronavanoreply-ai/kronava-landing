@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kronava — Aplicação Recebida</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKE9DLVR4M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RKE9DLVR4M');
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F5F3EF;
+      --text: #2A3B3D;
+      --text-muted: rgba(42, 59, 61, 0.6);
+      --border: #d8d4cc;
+      --gold: #8B6F47;
+      --btn-bg: #2A3B3D;
+      --btn-text: #F5F3EF;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 2rem 2rem 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.25em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+    }
+
+    .content {
+      max-width: 560px;
+      text-align: center;
+    }
+
+    .step-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: block;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      line-height: 1.25;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .content > p {
+      font-size: clamp(1rem, 2vw, 1.1rem);
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+
+    .next-steps {
+      text-align: left;
+      border-top: 1px solid var(--border);
+      padding-top: 2.5rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .next-step {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .next-step .num {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 1.1rem;
+      min-width: 1.5rem;
+    }
+
+    .next-step h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .next-step p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      margin-top: 3rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text);
+      border-bottom: 1px solid var(--text);
+      padding-bottom: 3px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn-ghost:hover { opacity: 0.5; }
+
+    footer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      width: 100%;
+    }
+
+    footer p {
+      font-size: 0.78rem;
+      color: var(--border);
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/" class="logo">KRONAVA</a>
+  </header>
+
+  <main>
+    <div class="content">
+      <span class="step-number">Aplicação Recebida</span>
+      <h1>Sua vaga está<br><em>em avaliação.</em></h1>
+      <p>Recebemos sua solicitação. As liberações do Beta Fechado acontecem em ondas restritas — você será avisado por e-mail quando for sua vez.</p>
+
+      <div class="next-steps">
+        <div class="next-step">
+          <span class="num">I</span>
+          <div>
+            <h3>Confirme seu e-mail</h3>
+            <p>Enviamos uma mensagem de confirmação. Verifique sua caixa de entrada (e o spam, por garantia).</p>
+          </div>
+        </div>
+        <div class="next-step">
+          <span class="num">II</span>
+          <div>
+            <h3>Aguarde o convite</h3>
+            <p>Quando sua vaga for liberada, você receberá as instruções para conectar sua conta ao Kronava pelo Telegram.</p>
+          </div>
+        </div>
+        <div class="next-step">
+          <span class="num">III</span>
+          <div>
+            <h3>Fique de olho no Telegram</h3>
+            <p>O acesso ao Kronava acontece através do bot @kronava_bot. É lá que sua experiência começa.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="/" class="btn-ghost">Voltar para a página inicial</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 KRONAVA</p>
+  </footer>
+
+</body>
+</html>

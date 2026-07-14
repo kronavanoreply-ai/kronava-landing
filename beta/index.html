@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kronava — Beta Fechado</title>
+  <meta name="description" content="Aplique para o Beta Fechado do Kronava. Vagas limitadas para o ecossistema financeiro que cuida das suas finanças de forma invisível." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKE9DLVR4M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RKE9DLVR4M');
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F5F3EF;
+      --bg-alt: #F2F2F0;
+      --text: #2A3B3D;
+      --text-muted: rgba(42, 59, 61, 0.6);
+      --border: #d8d4cc;
+      --gold: #8B6F47;
+      --btn-bg: #2A3B3D;
+      --btn-text: #F5F3EF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      padding: 2rem 2rem 0;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.25em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 8rem 2rem 5rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin: 0 auto 1.75rem;
+      max-width: 720px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.1rem);
+      color: var(--text-muted);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text);
+      border-bottom: 1px solid var(--text);
+      padding-bottom: 3px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn-ghost:hover { opacity: 0.5; }
+
+    .divider {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .divider hr {
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    .capture {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 8rem;
+    }
+
+    .capture-inner {
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .capture h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .capture p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+    }
+
+    @media (min-width: 640px) {
+      .form-group { flex-direction: row; align-items: flex-end; }
+    }
+
+    .input-email {
+      flex: 1;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--text);
+      outline: none;
+      min-height: 48px;
+      transition: border-color 0.2s;
+    }
+
+    .input-email::placeholder { color: var(--text-muted); }
+    .input-email:focus { border-bottom-color: var(--text); }
+
+    .btn-submit {
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      border: none;
+      padding: 0 2rem;
+      min-height: 48px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-submit:hover { opacity: 0.75; }
+    .btn-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .fine-print {
+      margin-top: 1.5rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer p {
+      font-size: 0.78rem;
+      color: var(--border);
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/" class="logo">KRONAVA</a>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>O Beta Fechado<br><em>do Kronava</em><br>está abrindo vagas.</h1>
+      <p>Um número limitado de pessoas terá acesso antecipado à inteligência que cuida das finanças de forma invisível. Aplique abaixo.</p>
+      <a href="#form" class="btn-ghost">Aplicar para o Beta Fechado</a>
+    </section>
+
+    <div class="divider"><hr /></div>
+
+    <!-- CAPTURA -->
+    <section class="capture" id="form">
+      <div class="capture-inner">
+        <h2>Aplicar para o Beta Fechado</h2>
+        <p>Deixe seu e-mail. As aplicações são avaliadas em ondas restritas e o acesso é liberado por convite.</p>
+        <div class="form-group" id="form-container">
+          <input
+            type="email"
+            class="input-email"
+            id="email-input"
+            placeholder="Seu e-mail corporativo"
+            autocomplete="email"
+            required
+          />
+          <button class="btn-submit" id="submit-btn" onclick="handleSubmit()">
+            Aplicar para o Beta Fechado
+          </button>
+        </div>
+        <p class="fine-print">Sem spam. Você receberá uma confirmação por e-mail.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 KRONAVA</p>
+  </footer>
+
+  <script>
+    async function handleSubmit() {
+      const emailInput = document.getElementById('email-input');
+      const submitBtn = document.getElementById('submit-btn');
+      const email = emailInput.value.trim();
+
+      if (!email || !email.includes('@')) {
+        emailInput.focus();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = '...';
+
+      try {
+        const res = await fetch('/api/curadoria', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+
+        if (res.ok || res.status === 409) {
+          if (window.gtag) {
+            window.gtag('event', 'curadoria_signup');
+          }
+          window.location.href = '/obrigado';
+        } else {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Aplicar para o Beta Fechado';
+          alert('Erro ao enviar. Tente novamente.');
+        }
+      } catch (err) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Aplicar para o Beta Fechado';
+        alert('Erro de conexão. Tente novamente.');
+      }
+    }
+
+    document.getElementById('email-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') handleSubmit();
+    });
+  </script>
+
+</body>
+</html>
